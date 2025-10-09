@@ -1,0 +1,16 @@
+{
+  "name": "09_ts",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "outDir": "dist",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

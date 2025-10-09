@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Agar-like (singleplayer) — Client</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    html,body { height:100%; margin:0; background:#111; color:#ddd; font-family: Arial, sans-serif; }
+    #game { display:block; background:#0b0b0b; margin:0 auto; box-shadow:0 0 20px rgba(0,0,0,0.7); }
+    #hud { position:fixed; left:8px; top:8px; font-size:14px; }
+    #status { color:#6cf; }
+    .note { color:#888; font-size:13px; margin-top:6px; }
+  </style>
+</head>
+<body>
+  <canvas id="game" width="900" height="600"></canvas>
+  <div id="hud">
+    <div>Player mass: <span id="mass">0</span></div>
+    <div id="status">Not connected</div>
+    <div class="note">Подключение к серверу Socket.IO сделано — сервер пока только принимает соединение.</div>
+  </div>
+
+  <!-- Socket.IO client (will load from CDN when served in browser) -->
+  <script src="https://cdn.socket.io/4.7.1/socket.io.min.js"></script>
+  <script type="module" src="./utils.js"></script>
+  <script type="module" src="./food.js"></script>
+  <script type="module" src="./player.js"></script>
+  <script type="module" src="./game.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
